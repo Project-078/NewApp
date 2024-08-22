@@ -3,9 +3,9 @@ from .models import Product, Category
 from django.shortcuts import render,redirect
 from django.contrib.auth.forms import UserCreationForm
 
-def product_list(request):
+def login(request):
     products = Product.objects.all()
-    return render(request, 'shop/product_list.html', {'products': products})
+    return render(request, 'shop/login.html', {'products': products})
 
 def product_detail(request, slug):
     product = get_object_or_404(Product, slug=slug)
