@@ -60,7 +60,8 @@
 <body>
     <div class="container">
         <h2>Register</h2>
-        <form method="POST" action="{{ url_for('register') }}">
+        <form method="POST">
+            {% csrf_token %}
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
             
