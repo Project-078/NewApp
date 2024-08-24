@@ -15,9 +15,12 @@ def category_list(request):
     categories = Category.objects.all()
     return render(request, 'shop/category_list.html', {'categories': categories})
 
+def lgn(request):
+    return render(request,'shop/lgn.html')
+
 def register(request):
     form=UserCreationForm(request.POST or None)
     if form.is_valid():
         form.save()
-        return redirect('login')
-    return render(request,'shop/register.html',{'form':form})
+        return redirect('shop/lgn.html')
+    return render(request,'shop/register.html')
