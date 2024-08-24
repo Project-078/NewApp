@@ -20,4 +20,4 @@ def register(request):
     if form.is_valid():
         form.save()
         return redirect('login')
-    return render(request,'users/register.html',{'form':form})
+    return render(request,'shop/register.html',{'form':form})
