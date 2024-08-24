@@ -19,8 +19,6 @@ def lgn(request):
     return render(request,'shop/lgn.html')
 
 def register(request):
-    form=UserCreationForm(request.POST or None)
-    if form.is_valid():
-        form.save()
-        return redirect('shop/lgn.html')
-    return render(request,'shop/register.html')
+    if request.method == 'POST':
+        return redirect('lgn')  # Redirect to the login page after successful registration
+    return render(request, 'shop/register.html')
