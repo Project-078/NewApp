@@ -1,0 +1,54 @@
+# Python-related files
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.so
+deep
+# Django-related files
+*.log
+*.pot
+*.py[co]
+*.sqlite3
+db.sqlite3
+.DS_Store
+
+# Media and static files
+media/
+staticfiles/
+
+# Environment variables
+.env
+
+# Virtual environment
+venv/
+env/
+ENV/
+.vscode/
+
+# Migrations
+**/migrations/**
+
+# Coverage and testing
+htmlcov/
+.coverage
+.tox/
+.cache
+.nox/
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# IDEs and editors
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# MacOS
+.DS_Store
+
+# Others
+*.bak
+*.swp
